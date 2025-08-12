@@ -13,7 +13,7 @@ This guide will help you set up EmailJS to send emails automatically from your c
 1. In your EmailJS dashboard, go to "Email Services"
 2. Click "Add New Service"
 3. Choose "Gmail" (or your preferred email provider)
-4. Connect your Gmail account (wolfjame@gmail.com)
+4. Connect your Gmail account (prosserbasketball8@gmail.com)
 5. Note down your **Service ID** (you'll need this)
 
 ## Step 3: Create Email Template
@@ -68,7 +68,7 @@ emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams);
 1. Open your website
 2. Fill out the contact form
 3. Submit the form
-4. Check your email (wolfjame@gmail.com) for the test message
+4. Check your email (prosserbasketball8@gmail.com) for the test message
 
 ## Benefits of This Setup
 
