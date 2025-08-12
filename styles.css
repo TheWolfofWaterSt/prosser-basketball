@@ -371,7 +371,7 @@ section h2 {
   }
 
   .hero {
-    padding: 6rem 0 3rem;
+    padding: 8rem 0 3rem;
   }
 
   section {
@@ -382,6 +382,10 @@ section h2 {
 @media (max-width: 480px) {
   .container {
     padding: 0 15px;
+  }
+
+  .hero {
+    padding: 9rem 0 3rem;
   }
 
   .hero-content h2 {
