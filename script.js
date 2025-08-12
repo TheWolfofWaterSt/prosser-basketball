@@ -12,6 +12,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// Initialize EmailJS
+(function () {
+  emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
+})();
+
 // Handle contact form submission
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -36,14 +41,53 @@ document.querySelector("form").addEventListener("submit", function (e) {
     return;
   }
 
-  // For now, just show a success message
-  // In a real implementation, you would send this data to your server
-  alert(
-    `Thank you for your message, ${name}! We'll get back to you soon at ${email}.`
-  );
+  // Show loading state
+  const submitButton = this.querySelector(".submit-button");
+  const originalText = submitButton.textContent;
+  submitButton.textContent = "Sending...";
+  submitButton.disabled = true;
 
-  // Reset the form
-  this.reset();
+  // Prepare email template parameters
+  const templateParams = {
+    to_email: "prosserbasketball8@gmail.com",
+    from_name: name,
+    from_email: email,
+    from_phone: phone,
+    message: message,
+    subject: `New Contact from ${name} - ${email} - ${phone}`,
+  };
+
+  // Send email using EmailJS
+  // This is a work in progress, but it should work if you follow the steps below
+  // What You Need to Do:
+  // Sign up for EmailJS (free account)
+  // Connect your Gmail (prosserbasketball8@gmail.com)
+  // Create an email template
+  // Get your API keys (Service ID, Template ID, Public Key)
+  // Replace the placeholders in the code
+  emailjs
+    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+    .then(
+      function (response) {
+        // Success
+        alert(
+          `Thank you for your message, ${name}! We'll get back to you soon.`
+        );
+        document.querySelector("form").reset();
+      },
+      function (error) {
+        // Error
+        alert(
+          "Sorry, there was an error sending your message. Please try again or contact us directly."
+        );
+        console.error("EmailJS Error:", error);
+      }
+    )
+    .finally(function () {
+      // Reset button state
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
+    });
 });
 
 // Add scroll effect to header
