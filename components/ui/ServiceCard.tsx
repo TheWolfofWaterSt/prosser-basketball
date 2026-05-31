@@ -25,11 +25,13 @@ export function ServiceCard({
   variant = "compact",
   className,
 }: ServiceCardProps) {
+  const isDetailed = variant === "detailed";
+
   return (
     <article
       className={cn(
-        "group flex flex-col rounded-sm border border-white/10 bg-bg-elevated p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 md:p-8",
-        variant === "detailed" && "lg:p-10",
+        "group flex h-full flex-col rounded-sm border border-white/10 bg-bg-elevated p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 md:p-8",
+        isDetailed && "lg:p-10",
         className,
       )}
     >
@@ -47,26 +49,33 @@ export function ServiceCard({
         </p>
       )}
 
-      {features && features.length > 0 && (
-        <ul className="mt-6 space-y-3">
-          {features.map((feature) => (
-            <li
-              key={feature}
-              className="flex items-start gap-3 text-sm text-text-secondary"
-            >
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              {feature}
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className={cn(isDetailed && "flex flex-1 flex-col")}>
+        {features && features.length > 0 && (
+          <ul className="mt-6 space-y-3">
+            {features.map((feature) => (
+              <li
+                key={feature}
+                className="flex items-start gap-3 text-sm text-text-secondary"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        )}
 
-      {bestFor && (
-        <p className="mt-6 rounded-sm border border-white/5 bg-bg-primary/50 p-4 text-sm text-text-secondary">
-          <span className="font-semibold text-text-primary">Best for: </span>
-          {bestFor}
-        </p>
-      )}
+        {bestFor && (
+          <p
+            className={cn(
+              "mt-6 rounded-sm border border-white/5 bg-bg-primary/50 p-4 text-sm text-text-secondary",
+              isDetailed && "mt-auto",
+            )}
+          >
+            <span className="font-semibold text-text-primary">Best for: </span>
+            {bestFor}
+          </p>
+        )}
+      </div>
 
       <div className="mt-auto pt-8">
         <Link

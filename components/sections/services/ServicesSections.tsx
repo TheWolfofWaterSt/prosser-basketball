@@ -26,9 +26,9 @@ export function ServicesDetailSection() {
           </p>
         </ScrollReveal>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+        <div className="mt-12 grid items-stretch gap-8 lg:grid-cols-2">
           {services.map((service) => (
-            <ScrollReveal key={service.id}>
+            <ScrollReveal key={service.id} className="h-full">
               <ServiceCard
                 title={service.title}
                 description={service.description}
