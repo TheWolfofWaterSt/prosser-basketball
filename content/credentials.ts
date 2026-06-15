@@ -15,13 +15,13 @@ export const credentials: Credential[] = [
   },
   {
     icon: Trophy,
-    title: "Head Coach, 14U Boys",
-    organization: "Wisconsin Playmakers",
+    title: "Head Coach, 15U",
+    organization: "2029 Playmakers National Team",
   },
   {
     icon: Building2,
     title: "Owner & Operator",
-    organization: "Prosser Basketball LLC / Playmakers Academy",
+    organization: "Prosser Basketball LLC",
   },
   {
     icon: Award,
@@ -44,7 +44,7 @@ export const philosophyQuotes = [
 ];
 
 export const aboutBio =
-  "Rayce Prosser has been around basketball his entire life — as a player, a student of the game, and now as a coach embedded in the Eau Claire community. He serves as an assistant varsity coach at Eau Claire Memorial High School and head coach of a 14U boys travel team with Wisconsin Playmakers. Through Playmakers Academy, Rayce brings that same level of commitment and detail to every athlete he trains.";
+  "Rayce Prosser has been around basketball his entire life — as a player, a student of the game, and now as a coach embedded in the Eau Claire community. He serves as an assistant varsity coach at Eau Claire Memorial High School and head coach of the 2029 Playmakers National Team (15U). Through Prosser Basketball, Rayce brings that same level of commitment and detail to every athlete he trains.";
 
 export const aboutIntro =
-  "Rayce isn't an outsider dropping in for sessions. He lives and breathes Eau Claire basketball — coaching at Memorial, leading a Playmakers travel team, and training the next generation of players through his own program.";
+  "Rayce isn't an outsider dropping in for sessions. He lives and breathes Eau Claire basketball — coaching at Memorial, leading the 2029 Playmakers National Team, and training the next generation of players through Prosser Basketball.";

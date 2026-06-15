@@ -16,7 +16,7 @@ export default function ServicesPage() {
     <>
       <HeroSection
         headline="Training Built for Real Improvement"
-        subheadline="Playmakers Academy offers focused, high-quality basketball training tailored to each athlete — whether they're coming in one-on-one or as part of a small group."
+        subheadline="Prosser Basketball offers focused, high-quality basketball training tailored to each athlete — whether they're coming in one-on-one or as part of a small group."
         size="default"
         className="pt-28"
       />

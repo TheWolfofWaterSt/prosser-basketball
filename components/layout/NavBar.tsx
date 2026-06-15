@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 
 export function NavBar() {
   const pathname = usePathname();
+  const [brandPrimary, brandSecondary] = SITE.program.split(" ");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -107,10 +108,10 @@ export function NavBar() {
             onClick={closeMobileMenu}
           >
             <span className="font-display text-lg font-black uppercase leading-none tracking-tight text-text-primary transition-colors group-hover:text-accent md:text-xl">
-              {SITE.name.split(" ")[0]} Basketball
+              {brandPrimary}
             </span>
             <span className="mt-0.5 font-display text-[10px] font-semibold uppercase tracking-[0.2em] text-accent md:text-xs">
-              {SITE.program}
+              {brandSecondary}
             </span>
           </Link>
 

@@ -17,7 +17,7 @@ import { TestimonialCard } from "@/components/ui/TestimonialCard";
 const credibilityStats = [
   { value: SITE.stats.athletesTrained, label: "Athletes Trained", animate: true },
   { value: "Varsity", label: "Assistant Coach — Eau Claire Memorial" },
-  { value: "14U", label: "Head Coach — Wisconsin Playmakers" },
+  { value: "15U", label: `Head Coach — ${SITE.aauTeam}` },
   { value: "EC", label: "Based in Eau Claire, WI" },
 ];
 
@@ -34,7 +34,7 @@ export function HomePhilosophySection() {
             id="philosophy-heading"
             className="mt-3 max-w-3xl font-display text-3xl font-black uppercase tracking-tight text-text-primary md:text-4xl lg:text-5xl"
           >
-            Why Playmakers Academy Is Different
+            Why Prosser Basketball Is Different
           </h2>
         </ScrollReveal>
 
@@ -64,7 +64,7 @@ export function HomeCredibilitySection() {
         className="pointer-events-none absolute -left-10 top-1/2 -translate-y-1/2 font-display text-[12rem] font-black leading-none text-white/[0.02] md:text-[16rem]"
         aria-hidden="true"
       >
-        40+
+        {SITE.stats.athletesTrained}
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">

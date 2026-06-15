@@ -41,14 +41,14 @@ export function createPageMetadata({
 export const homeMetadata = createPageMetadata({
   title: "Basketball Skills Training Eau Claire WI",
   description:
-    "Playmakers Academy offers elite youth and teen basketball skills training in Eau Claire, WI. Physical skill development paired with basketball IQ. Individual and group sessions available.",
+    "Prosser Basketball offers elite youth and teen basketball skills training in Eau Claire, WI. Physical skill development paired with basketball IQ. Individual and group sessions available.",
   path: "/",
 });
 
 export const aboutMetadata = createPageMetadata({
   title: "Meet Coach Rayce Prosser",
   description:
-    "Meet Rayce Prosser — varsity assistant coach at Eau Claire Memorial, 14U head coach at Wisconsin Playmakers, and founder of Prosser Basketball LLC in the Eau Claire area.",
+    "Meet Rayce Prosser — varsity assistant coach at Eau Claire Memorial, 15U head coach of the 2029 Playmakers National Team, and founder of Prosser Basketball LLC in the Eau Claire area.",
   path: "/about",
 });
 

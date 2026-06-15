@@ -1,6 +1,7 @@
 export const SITE = {
   name: "Prosser Basketball LLC",
-  program: "Playmakers Academy",
+  program: "Prosser Basketball",
+  aauTeam: "2029 Playmakers National Team",
   coach: "Rayce Prosser",
   tagline: "Train Your Game. Sharpen Your Mind.",
   email: "prosserbasketball8@gmail.com",
@@ -15,7 +16,7 @@ export const SITE = {
     addressLine: "Wisconsin Playmakers, Altoona, WI",
   },
   stats: {
-    athletesTrained: "40+",
+    athletesTrained: "60+",
   },
 } as const;
 

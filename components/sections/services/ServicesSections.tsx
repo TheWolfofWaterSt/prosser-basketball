@@ -64,7 +64,7 @@ export function ServicesPhilosophySection() {
           </h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
             Every session — individual or group — is built on the same three
-            pillars that define Playmakers Academy.
+            pillars that define Prosser Basketball.
           </p>
         </ScrollReveal>
 

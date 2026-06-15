@@ -4,6 +4,7 @@ import { NAV_LINKS, SITE } from "@/lib/constants";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [brandPrimary, brandSecondary] = SITE.program.split(" ");
 
   return (
     <footer className="border-t border-white/10 bg-bg-secondary">
@@ -12,11 +13,11 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
               <span className="font-display text-xl font-black uppercase tracking-tight text-text-primary">
-                {SITE.name.split(" ")[0]} Basketball
+                {brandPrimary}
               </span>
             </Link>
             <p className="mt-1 font-display text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              {SITE.program}
+              {brandSecondary}
             </p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-text-secondary">
               Premier basketball skills development for youth and teen athletes
@@ -83,6 +84,17 @@ export function Footer() {
         <div className="mt-10 border-t border-white/10 pt-8 text-center text-sm text-text-muted">
           <p>
             &copy; {currentYear} {SITE.name}. All rights reserved.
+          </p>
+          <p className="mt-2 text-xs">
+            Website Built by{" "}
+            <a
+              href="https://www.jameswolf.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-secondary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              James Wolf Web Design
+            </a>
           </p>
         </div>
       </div>
